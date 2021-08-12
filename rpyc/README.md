@@ -34,7 +34,7 @@ able to successfully implement a rpyc module:
 
 ### Start from the simple stuff
 There is no doubt that teleporting a function to the remote server is awesome as shit.  
-However before we go an implement all that crazy stuff lets start with the basic.
+However before we go and implement all that crazy stuff lets start with something more basic.
 
 #### First Iteration
 Allow importing already installed modules and calling their function with __basic literal types__.  
@@ -54,8 +54,9 @@ Lets define the requirements a little better:
 1. You will be able to connect to the server via host name
 2. You will have access to all the modules on the remote server.
 3. Currently, you will only allow passing basic data types (`int`, `str`, `boolean`, ...).
-4. You will also support accessing variables with basic data types from the modules, for example `os.path.sep`.
+4. You will also support accessing variables that are basic data types from the modules, for example `connection.modules.os.path.sep`.
 5. Currently, you cannot assign or mutate the state on the remote, but it may be a request in feature iterations.
+6. The modules of the remote server will be located under `connection.modules`.
 
 Good Luck :)
 
